@@ -1,5 +1,5 @@
 <?php
-require_once '../vehicles/Vehicle.php';
+require_once 'vehicles/Vehicle.php';
 
 abstract class HighWay
 {

@@ -1,6 +1,6 @@
 <?php
 
-require_once 'HighWay.php';
+require_once 'roadways/HighWay.php';
 
 final class PedestrianWay extends HighWay
 {

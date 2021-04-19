@@ -1,6 +1,6 @@
 <?php
 
-require_once 'HighWay.php';
+require_once 'roadways/HighWay.php';
 
 final class MotorWay extends HighWay
 {
@@ -13,8 +13,8 @@ final class MotorWay extends HighWay
 
     public function addVehicle($newVehicle)
     {
-        if(!($newVehicle instanceof Bicycle)){
-            $currentVehicles[] = $newVehicle;
+        if(!($newVehicle instanceof Bicycle || $newVehicle instanceof Skateboard)){
+            $this->currentVehicles[] = $newVehicle;
         }
     }
 
