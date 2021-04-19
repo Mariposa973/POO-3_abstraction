@@ -20,7 +20,7 @@ echo $bike->forward();
 echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed() . ' km/h' . '<br>';
 echo $bike->brake();
 echo '<br> Vitesse du vélo : ' . $bike->getCurrentSpeed() . ' km/h' . '<br>';
-echo $bike->brake() . '<br><br>'  ;
+echo $bike->brake() . '<br><br>';
 
 
 // Instanciation d'un nouvel objet $rockrider
@@ -34,10 +34,21 @@ $tornado->forward();
 
 echo '<h3>Informations sur la voiture</h3>';
 // Moving car
-echo $myCar->forward();
-echo '<br> Vitesse de la voiture : ' . $myCar->getCurrentSpeed() . ' km/h' . '<br>';
-echo $myCar->forward();
-echo '<br> Vitesse de la voiture : ' . $myCar->getCurrentSpeed() . ' km/h' . '<br>';
-echo $myCar->brake();
-echo '<br> Vitesse de la voiture : ' . $myCar->getCurrentSpeed() . ' km/h' . '<br>';
-echo $myCar->brake();
+
+
+$myCar->setParkBrake();
+try {
+    echo $myCar->start() . "<\br>";
+    echo $myCar->forward();
+    echo '<br> Vitesse de la voiture : ' . $myCar->getCurrentSpeed() . ' km/h' . '<br>';
+    echo $myCar->forward();
+    echo '<br> Vitesse de la voiture : ' . $myCar->getCurrentSpeed() . ' km/h' . '<br>';
+    echo $myCar->brake();
+    echo '<br> Vitesse de la voiture : ' . $myCar->getCurrentSpeed() . ' km/h' . '<br>';
+    echo $myCar->brake();
+} catch (Exception $e) {
+    echo "Exception received  : " . $e->getMessage();
+    $myCar->setParkBrake(FALSE);
+} finally {
+    echo "Ma voiture roule comme un donut";
+};
