@@ -4,7 +4,6 @@ namespace App;
 Class Speedometer
 {
     public const KM_TO_MILES_CONVERSION = 0.621371;
-    public const MILES_TO_KM_CONVERSION = 1.60934;
 
     public static function convertKmToMiles(int $kilometers): float
     {
@@ -12,7 +11,7 @@ Class Speedometer
     }
     public static function convertMilesToKm(int $miles): float
     {
-        return $miles * self::MILES_TO_KM_CONVERSION;
+        return $miles / self::KM_TO_MILES_CONVERSION;
     }
 }
 
