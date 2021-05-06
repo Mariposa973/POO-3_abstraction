@@ -1,12 +1,14 @@
 <?php
-require_once 'vehicles/Bicycle.php';
-require_once 'vehicles/Car.php';
-require_once 'vehicles/Truck.php';
-require_once 'vehicles/Skateboard.php';
-require_once 'roadways/MotorWay.php';
-require_once 'roadways/PedestrianWay.php';
-require_once 'roadways/ResidentialWay.php';
+namespace App;
 
+use App\vehicles\Bicycle;
+use App\vehicles\Car;
+use App\vehicles\Truck;
+use App\vehicles\Skateboard;
+use App\roadways\MotorWay;
+use App\roadways\PedestrianWay;
+use App\roadways\ResidentialWay;
+use Exception;
 
 $bike = new Bicycle('white', 1);
 $myCar = new Car('red', 5, 'electric');
