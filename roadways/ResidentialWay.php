@@ -1,6 +1,7 @@
 <?php
 
-require_once 'roadways/HighWay.php';
+namespace App\roadways;
+use App\roadways\HighWay;
 
 final class ResidentialWay extends HighWay
 {

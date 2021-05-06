@@ -1,6 +1,7 @@
 <?php
-
-require_once 'vehicles/Vehicle.php';
+namespace App\vehicles;
+use App\vehicles\Vehicle;
+use Exception;
 
 class Car extends Vehicle
 {
@@ -77,6 +78,14 @@ class Car extends Vehicle
         } else {
             return "La voiture roule déjà!";
         }
+    }
+
+    public function switchOn(){
+        return true;
+    }
+
+    public function switchOff(){
+        return false;
     }
 }
 

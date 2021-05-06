@@ -1,5 +1,7 @@
 <?php
-require_once 'vehicles/Vehicle.php';
+namespace App\roadways;
+use App\vehicles\Vehicle;
+
 
 abstract class HighWay
 {

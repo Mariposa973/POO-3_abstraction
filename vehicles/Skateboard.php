@@ -1,6 +1,6 @@
 <?php
-
-require_once 'vehicles/Vehicle.php';
+namespace App\vehicles;
+use App\vehicles\Vehicle;
 
 class Skateboard extends Vehicle
 

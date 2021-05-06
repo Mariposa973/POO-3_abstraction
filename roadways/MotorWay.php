@@ -1,6 +1,9 @@
 <?php
 
-require_once 'roadways/HighWay.php';
+namespace App\roadways;
+use App\roadways\HighWay;
+use App\vehicles\Bicycle;
+use App\vehicles\Skateboard;
 
 final class MotorWay extends HighWay
 {
